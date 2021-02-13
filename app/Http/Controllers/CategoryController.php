@@ -102,7 +102,6 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        // return $request->all();
         $category=Category::findOrFail($id);
         $this->validate($request,[
             'title'=>'string|required',
